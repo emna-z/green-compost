@@ -58,7 +58,6 @@ There are 69 identified species summarized in the table below. RA is the relativ
 #| warning: false
 #| echo: false
 #| label: table species
-#| results: true
 kbl(species %>% 
       mutate(
         RA_bacteria = round(RA_bacteria, digits = 2)

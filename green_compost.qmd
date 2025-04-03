@@ -1,0 +1,199 @@
+---
+title: "Green compost microbial DNA analysis"
+author: "EZ"
+date-modified: "Last compiled on `r format(Sys.time(), '%d %B, %Y')`" 
+format: 
+  html:
+    html-math-method: katex
+    toc: true
+    toc-location: left
+    toc-depth: 5
+    toc_float:
+      collapsed: true
+      smooth_scroll: true
+    code-fold: true  
+    highlight-style: a11y-dark
+    default-image-extension: svg
+theme:
+  light: flatly
+  dark: darkly
+execute:
+  warning: false
+editor: visual
+---
+
+## Bacteria
+
+## class
+
+```{r}
+
+#| label: loading data
+#| results: hide
+#| warning: false
+#| echo: false
+
+setwd("C:/Users/E.Zeghal/OneDrive - Maan Glueing Technologies BV/R projects/green-compost/")
+library("tidyverse")
+library("kableExtra")
+
+map <- read_tsv("data/mapfile2.txt") %>% 
+  mutate(Sample_ID = as.factor(Sample_ID))
+
+species <- read_csv2("data/16S_Abundance_Species.csv") %>% 
+  mutate(Sample_ID = as.factor(Sample_ID)) %>% 
+  pivot_longer(!Sample_ID, names_to = "bacteria_species", values_to = "RA_bacteria") %>% 
+  left_join(y = map, by = "Sample_ID" ) %>% 
+  mutate_if(is.character,as.factor) %>% 
+  filter(Sample_ID %in% "1") %>% 
+  filter(RA_bacteria > 0) %>% 
+  select(Sample_ID, bacteria_species, RA_bacteria, Substrat) %>% 
+  arrange(desc(RA_bacteria))
+
+```
+
+There are 69 identified species summarized in the table below. RA is the relative abundance in percentage.
+
+```{r}
+#| warning: false
+#| echo: false
+#| label: table species
+#| results: false
+kbl(species %>% 
+      mutate(
+        RA_bacteria = round(RA_bacteria, digits = 2)
+        )) %>%
+  kable_paper() %>%
+  column_spec(2, italic = TRUE) %>% 
+  scroll_box(width = "100%", height = "300px")
+```
+
+```{r}
+#| label: barplot species
+#| echo: false
+#| warning: false
+#| results: false
+#| output: True
+#| out-height: 100%
+#| out-width: 100%
+#| dev: svg
+
+ct <- c( "#32964d", "#cc9cc7", "#15dec5", "#622e86", "#d0cc36", "#464a15", "#eb4b2f", "#f67fec", "#646794", "#a4044d")
+
+
+
+plot <-ggplot(species[1:10,1:4], 
+              aes(x= fct_reorder(bacteria_species, RA_bacteria),
+                  y= RA_bacteria,
+                  fill= bacteria_species))+
+  geom_bar(stat="identity") +
+  scale_fill_manual(values= ct)+
+  
+  # scale_y_continuous(labels=percent, expand = c(0,0))+
+  theme_classic()+
+  labs(title = "Top 10 bacterial species in green compost sample")+
+  ylab("Relative Abundance (%)")+
+  xlab("bacteria species")+
+  theme(plot.title.position = "plot",
+        legend.position = "none",
+        axis.title.y = element_text(size= 12,
+                                    face = "bold"),
+        axis.text.y = element_text(size = 10, 
+                                   face = "bold.italic"),
+        axis.text.x = element_text(size = 10,
+                                   face = "bold",
+                                   hjust = 0.5, 
+                                   vjust= 0.5,
+                                   margin = margin(t = 1)),
+        axis.title.x = element_text(size= 12,
+                                    face = "bold",
+                                      margin(t = 8)),
+        panel.grid.major = element_line(colour = NA),
+        panel.grid.minor = element_line(colour = NA))+ 
+  coord_flip()
+
+plot
+```
+
+### Class
+
+```{r}
+#| label: Top classes per sample
+#| results: hide
+#| warning: false
+
+library("Hmisc")
+
+class <- read_csv2("data/16S_Abundance_class.csv") %>% 
+  mutate(Sample_ID = as.factor(Sample_ID)) %>% 
+  mutate_if(is.character, as.factor) %>% 
+  pivot_longer(!Sample_ID, names_to = "bacteria_class", values_to = "RA_bacteria") %>% 
+  left_join(y = map, by = "Sample_ID") %>% 
+  filter(Sample_ID %in% "1") %>% 
+  filter(RA_bacteria > 0) %>%
+  select(Sample_ID, bacteria_class, RA_bacteria, Substrat) %>% 
+  arrange(desc(RA_bacteria))
+
+
+```
+
+There are 67 identified classes in this sample.
+
+```{r}
+#| warning: false
+#| echo: false
+#| label: table top classes bacteria
+kbl(class %>% 
+      mutate(
+        RA_bacteria = round(RA_bacteria, digits = 2)
+        )
+    ) %>%
+  kable_paper() %>% 
+  scroll_box(width = "100%", height = "300px")
+```
+
+```{r}
+#| label: barplot classes
+#| echo: false
+#| warning: false
+#| results: false
+#| output: True
+#| out-height: 100%
+#| out-width: 100%
+#| dev: svg
+
+ct <- c( "#256676", "#bc5857", "#8184fb", "#7430a3", "#efd0a5", "#7ba979", "#d5d0fa", "#dc5dd8", "#fd8f2f", "#e6262f", "#d8dc35", "#5a4316", "#2b5013", "#4aeeb6")
+
+plot2 <-ggplot(class[1:14,], 
+              aes(x= fct_reorder(bacteria_class, RA_bacteria),
+                  y= RA_bacteria,
+                  group = Sample_ID,
+                  fill= fct_reorder(bacteria_class, RA_bacteria)))+
+  geom_bar(stat="identity") +
+  scale_fill_manual(values= rev(ct))+
+    theme_classic()+
+  labs(title = "bacterial classes ≥ 1% in green compost sample")+
+  ylab("Relative Abundance (%)")+
+  xlab("bacteria class")+
+  theme(plot.title.position = "plot",
+        legend.position = "none",
+        axis.title.y = element_text(size= 12,
+                                    face = "bold"),
+        axis.text.y = element_text(size = 10, 
+                                   face = "bold.italic"),
+        axis.text.x = element_text(size = 10, 
+                                   face = "bold",
+                                   hjust = 0.5, 
+                                   vjust= 0.5,
+                                   margin = margin(t = 1)),
+        axis.title.x = element_text(size= 12,
+                                    face = "bold",
+                                    margin = 
+                                      margin(t = 8)),
+        panel.grid.major = element_line(colour = NA),
+        panel.grid.minor = element_line(colour = NA))+ 
+  coord_flip()
+
+plot2
+
+```

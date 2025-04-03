@@ -24,12 +24,12 @@ editor: visual
 
 ## Bacteria
 
-## class
+### species
 
 ```{r}
 
 #| label: loading data
-#| results: hide
+#| results: false
 #| warning: false
 #| echo: false
 
@@ -58,7 +58,7 @@ There are 69 identified species summarized in the table below. RA is the relativ
 #| warning: false
 #| echo: false
 #| label: table species
-#| results: false
+#| results: true
 kbl(species %>% 
       mutate(
         RA_bacteria = round(RA_bacteria, digits = 2)
@@ -115,20 +115,24 @@ plot <-ggplot(species[1:10,1:4],
 plot
 ```
 
-### Class
+### class
 
 ```{r}
 #| label: Top classes per sample
 #| results: hide
 #| warning: false
+#| echo: false
 
 library("Hmisc")
 
 class <- read_csv2("data/16S_Abundance_class.csv") %>% 
   mutate(Sample_ID = as.factor(Sample_ID)) %>% 
   mutate_if(is.character, as.factor) %>% 
-  pivot_longer(!Sample_ID, names_to = "bacteria_class", values_to = "RA_bacteria") %>% 
-  left_join(y = map, by = "Sample_ID") %>% 
+  pivot_longer(!Sample_ID, 
+               names_to = "bacteria_class", 
+               values_to = "RA_bacteria") %>% 
+  left_join(y = map, 
+            by = "Sample_ID") %>% 
   filter(Sample_ID %in% "1") %>% 
   filter(RA_bacteria > 0) %>%
   select(Sample_ID, bacteria_class, RA_bacteria, Substrat) %>% 

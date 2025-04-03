@@ -86,10 +86,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#bacteria" id="toc-bacteria" class="nav-link active" data-scroll-target="#bacteria">Bacteria</a></li>
-  <li><a href="#class" id="toc-class" class="nav-link" data-scroll-target="#class">class</a>
+  <li><a href="#bacteria" id="toc-bacteria" class="nav-link active" data-scroll-target="#bacteria">Bacteria</a>
   <ul>
-  <li><a href="#class-1" id="toc-class-1" class="nav-link" data-scroll-target="#class-1">Class</a></li>
+  <li><a href="#species" id="toc-species" class="nav-link" data-scroll-target="#species">species</a></li>
+  <li><a href="#class" id="toc-class" class="nav-link" data-scroll-target="#class">class</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -131,14 +131,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="bacteria" class="level2">
 <h2 class="anchored" data-anchor-id="bacteria">Bacteria</h2>
-</section>
-<section id="class" class="level2">
-<h2 class="anchored" data-anchor-id="class">class</h2>
+<section id="species" class="level3">
+<h3 class="anchored" data-anchor-id="species">species</h3>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: loading data</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| results: hide</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| results: false</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
@@ -163,6 +162,439 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>There are 69 identified species summarized in the table below. RA is the relative abundance in percentage.</p>
 <div class="cell">
 <div class="cell-output-display">
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:300px; overflow-x: scroll; width:100%; ">
+<table class="lightable-paper caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">Sample_ID</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">bacteria_species</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">RA_bacteria</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">Substrat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Methylocaldum szegediense</td>
+<td style="text-align: right;">2.18</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Sphaerobacter thermophilus</td>
+<td style="text-align: right;">0.52</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Hydrogenophaga temperata</td>
+<td style="text-align: right;">0.19</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Hydrogenophaga intermedia</td>
+<td style="text-align: right;">0.16</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Thermomonospora curvata</td>
+<td style="text-align: right;">0.14</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Phenylobacterium mobile</td>
+<td style="text-align: right;">0.14</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Geobacillus thermodenitrificans/tropicalis</td>
+<td style="text-align: right;">0.12</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Chryseobacterium haifense</td>
+<td style="text-align: right;">0.12</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Flavobacterium luticocti</td>
+<td style="text-align: right;">0.12</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Planifilum fulgidum/yunnanense</td>
+<td style="text-align: right;">0.11</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Devosia ginsengisoli/humi/insulae</td>
+<td style="text-align: right;">0.09</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Arenimonas composti/daejeonensis/malthae</td>
+<td style="text-align: right;">0.09</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Cellvibrio fulvus</td>
+<td style="text-align: right;">0.09</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Aridibacter famidurans/nitratireducens</td>
+<td style="text-align: right;">0.09</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Thermogutta terrifontis</td>
+<td style="text-align: right;">0.07</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Marmoricola solisilvae</td>
+<td style="text-align: right;">0.07</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Lysobacter bugurensis</td>
+<td style="text-align: right;">0.07</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Algoriphagus aquatilis/olei</td>
+<td style="text-align: right;">0.07</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Geobacillus kaustophilus</td>
+<td style="text-align: right;">0.06</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Mycobacterium buckleii/hassiacum</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Novosphingobium ginsenosidimutans</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Arenimonas caeni/donghaensis</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Symbiobacterium ostreiconchae/thermophilum</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Flavobacterium suncheonense</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Thauera aminoaromatica/phenylacetica/selenatis</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Rummeliibacillus pycnus</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Thermopolyspora flexuosa</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Devosia hwasunensis/riboflavina/subaequoris</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Flavihumibacter sediminis</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Thauera aminoaromatica/humireducens/mechernichensis</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Thermomonas fusca/haemolytica/koreensis</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Thermobacillus composti/xylanilyticus</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Thermaerobacter composti</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Pseudoxanthomonas jiangsuensis/suwonensis</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Thermobispora bispora</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Thermoactinomyces vulgaris</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Ureibacillus suwonensis</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Thermoactinomyces daqus</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Pedobacter composti/ruber</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Nonomuraea fastidiosa/thermotolerans</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Thermasporomyces composti</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Schlegelella aquatica/thermodepolymerans</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Reyranella aquatilis</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Flavobacterium cauense/limnosediminis/saliperosum</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Thermoactinomyces intermedius</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Devosia geojensis</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Thermobifida fusca</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Tabrizicola aquatica</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Noviherbaspirillum autotrophicum/massiliense</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Paenibacillus ginsengihumi/pueri</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Immundisolibacter cernigliae</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Ornithinimicrobium humiphilum/pekingense</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Clostridium sensu stricto 7 thermobutyricum/thermopalmarium</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Chelativorans composti</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Pseudoxanthomonas japonensis/mexicana</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Ureibacillus composti/suwonensis/thermophilus</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Pusillimonas noertemannii</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Brevibacillus aydinogluensis/thermoruber</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Tuberibacillus calidus</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Lysinibacillus acetophenoni/manganicus/massiliensis</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Paenibacillus barengoltzii/xylanilyticus</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Acinetobacter lwoffii</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Symbiobacterium terraclitae</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Ammoniphilus resinae</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Caldibacillus debilis</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Clostridium sensu stricto 13 pascui/peptidivorans</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Aeribacillus composti/pallidus</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Streptomyces bluensis/spongiae</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left; font-style: italic;">Calditerricola yamamurae</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: left;">Grungutkompost</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
 <div>
 <figure class="figure">
 <p><img src="green_compost_files/figure-html/barplot%20species-1.svg" style="width:100.0%;height:100.0%" class="figure-img"></p>
@@ -170,24 +602,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<section id="class-1" class="level3">
-<h3 class="anchored" data-anchor-id="class-1">Class</h3>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"Hmisc"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>class <span class="ot">&lt;-</span> <span class="fu">read_csv2</span>(<span class="st">"data/16S_Abundance_class.csv"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Sample_ID =</span> <span class="fu">as.factor</span>(Sample_ID)) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.character, as.factor) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="sc">!</span>Sample_ID, <span class="at">names_to =</span> <span class="st">"bacteria_class"</span>, <span class="at">values_to =</span> <span class="st">"RA_bacteria"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(<span class="at">y =</span> map, <span class="at">by =</span> <span class="st">"Sample_ID"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Sample_ID <span class="sc">%in%</span> <span class="st">"1"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(RA_bacteria <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Sample_ID, bacteria_class, RA_bacteria, Substrat) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(RA_bacteria))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
+</section>
+<section id="class" class="level3">
+<h3 class="anchored" data-anchor-id="class">class</h3>
 <p>There are 67 identified classes in this sample.</p>
 <div class="cell">
 <div class="cell-output-display">
